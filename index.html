@@ -1,14 +1,522 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Arundhathi S Pradeep</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Arundhathi S Pradeep | Cybersecurity Portfolio</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #0a0f14;
+            color: #e6edf3;
+            line-height: 1.6;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(10, 15, 20, 0.95);
+            border-bottom: 1px solid #1f2933;
+            padding: 18px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        nav .logo {
+            font-size: 22px;
+            font-weight: bold;
+            color: #58a6ff;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+        }
+
+        nav ul li a {
+            color: #c9d1d9;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #58a6ff;
+        }
+
+        section {
+            padding: 100px 8%;
+        }
+
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background:
+                radial-gradient(circle at top, #13202d 0%, #0a0f14 55%);
+        }
+
+        .hero h1 {
+            font-size: 55px;
+            margin-bottom: 15px;
+        }
+
+        .hero h1 span {
+            color: #58a6ff;
+        }
+
+        .hero h2 {
+            font-size: 25px;
+            color: #8b949e;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            max-width: 700px;
+            margin: auto;
+            color: #a8b3be;
+            font-size: 17px;
+        }
+
+        .buttons {
+            margin-top: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 25px;
+            margin: 5px;
+            border: 1px solid #58a6ff;
+            border-radius: 6px;
+            color: #58a6ff;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #58a6ff;
+            color: #0a0f14;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 35px;
+            color: #58a6ff;
+        }
+
+        .section-title p {
+            color: #8b949e;
+        }
+
+        .about {
+            max-width: 900px;
+            margin: auto;
+            text-align: center;
+            color: #b8c2cc;
+        }
+
+        .skills {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 20px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        .skill {
+            background: #111820;
+            border: 1px solid #26313c;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            transition: 0.3s;
+        }
+
+        .skill:hover {
+            transform: translateY(-5px);
+            border-color: #58a6ff;
+        }
+
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .project {
+            background: #111820;
+            border: 1px solid #26313c;
+            padding: 25px;
+            border-radius: 10px;
+            transition: 0.3s;
+        }
+
+        .project:hover {
+            transform: translateY(-5px);
+            border-color: #58a6ff;
+        }
+
+        .project h3 {
+            color: #58a6ff;
+            margin-bottom: 12px;
+        }
+
+        .project p {
+            color: #a8b3be;
+            margin-bottom: 15px;
+        }
+
+        .tools {
+            color: #8b949e;
+            font-size: 14px;
+        }
+
+        .experience {
+            max-width: 900px;
+            margin: auto;
+        }
+
+        .experience-box {
+            background: #111820;
+            border-left: 3px solid #58a6ff;
+            padding: 25px;
+            margin-bottom: 25px;
+        }
+
+        .experience-box h3 {
+            color: #58a6ff;
+        }
+
+        .experience-box p {
+            color: #a8b3be;
+        }
+
+        .contact {
+            text-align: center;
+        }
+
+        .contact p {
+            color: #a8b3be;
+            margin-bottom: 20px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            border-top: 1px solid #1f2933;
+            color: #6e7681;
+        }
+
+        @media (max-width: 700px) {
+
+            nav {
+                padding: 15px 5%;
+            }
+
+            nav ul {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 40px;
+            }
+
+            .hero h2 {
+                font-size: 20px;
+            }
+
+            section {
+                padding: 80px 5%;
+            }
+        }
+    </style>
 </head>
+
 <body>
 
-    <h1>Arundhathi S Pradeep</h1>
-    <h2>Associate Cybersecurity Professional</h2>
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">ASP.</div>
 
-    <p>Welcome to my cybersecurity portfolio.</p>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+
+    <!-- Home -->
+    <section class="hero" id="home">
+        <div>
+            <h1>Hi, I'm <span>Arundhathi</span></h1>
+
+            <h2>Cybersecurity Professional</h2>
+
+            <p>
+                Cybersecurity enthusiast focused on vulnerability assessment,
+                penetration testing, API security, network security and
+                security research.
+            </p>
+
+            <div class="buttons">
+                <a href="#projects" class="btn">View My Projects</a>
+                <a href="#contact" class="btn">Contact Me</a>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- About -->
+    <section id="about">
+
+        <div class="section-title">
+            <h2>About Me</h2>
+            <p>Get to know me</p>
+        </div>
+
+        <div class="about">
+            <p>
+                I am a cybersecurity professional with an interest in
+                vulnerability assessment, penetration testing, API security,
+                network security and security operations.
+            </p>
+
+            <br>
+
+            <p>
+                I enjoy exploring security tools, analysing applications,
+                identifying vulnerabilities and continuously learning
+                through hands-on labs and security projects.
+            </p>
+        </div>
+
+    </section>
+
+
+    <!-- Skills -->
+    <section id="skills">
+
+        <div class="section-title">
+            <h2>Skills & Tools</h2>
+            <p>Technologies I work with</p>
+        </div>
+
+        <div class="skills">
+
+            <div class="skill">Burp Suite</div>
+            <div class="skill">Nmap</div>
+            <div class="skill">OWASP ZAP</div>
+            <div class="skill">Nessus</div>
+            <div class="skill">SQLMap</div>
+            <div class="skill">Gobuster</div>
+            <div class="skill">Nuclei</div>
+            <div class="skill">Linux</div>
+            <div class="skill">Python</div>
+            <div class="skill">Postman</div>
+            <div class="skill">Web Security</div>
+            <div class="skill">API Security</div>
+            <div class="skill">Network Security</div>
+            <div class="skill">VAPT</div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Experience -->
+    <section id="experience">
+
+        <div class="section-title">
+            <h2>Experience</h2>
+            <p>My professional journey</p>
+        </div>
+
+        <div class="experience">
+
+            <div class="experience-box">
+
+                <h3>Cybersecurity Internship</h3>
+
+                <p>
+                    Worked on cybersecurity-related tasks including data
+                    collection, security research, documentation and
+                    identifying/reporting bugs.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Projects -->
+    <section id="projects">
+
+        <div class="section-title">
+            <h2>Projects</h2>
+            <p>Hands-on cybersecurity work</p>
+        </div>
+
+        <div class="projects">
+
+            <div class="project">
+
+                <h3>Multi-Honeypot</h3>
+
+                <p>
+                    A Python-based multi-honeypot project designed to
+                    simulate services and monitor attacker activity.
+                </p>
+
+                <div class="tools">
+                    Python · Linux · Flask · UFW · nftables
+                </div>
+
+            </div>
+
+
+            <div class="project">
+
+                <h3>VAPT & Web Security</h3>
+
+                <p>
+                    Hands-on vulnerability assessment and penetration testing
+                    involving reconnaissance, enumeration, scanning and
+                    security testing.
+                </p>
+
+                <div class="tools">
+                    Burp Suite · Nmap · Nikto · Gobuster · Nuclei
+                </div>
+
+            </div>
+
+
+            <div class="project">
+
+                <h3>API Security Testing</h3>
+
+                <p>
+                    Tested APIs for authentication, authorization, input
+                    validation, session handling and other security controls.
+                </p>
+
+                <div class="tools">
+                    Postman · Burp Suite · API Testing
+                </div>
+
+            </div>
+
+
+            <div class="project">
+
+                <h3>Network Security Assessment</h3>
+
+                <p>
+                    Analysed network security risks and developed a network
+                    defense approach covering segmentation, access control
+                    and monitoring.
+                </p>
+
+                <div class="tools">
+                    Network Security · Nmap · Security Assessment
+                </div>
+
+            </div>
+
+
+            <div class="project">
+
+                <h3>Security Labs & CTFs</h3>
+
+                <p>
+                    Hands-on learning through cybersecurity labs, CTFs,
+                    reconnaissance, exploitation and post-exploitation
+                    exercises.
+                </p>
+
+                <div class="tools">
+                    TryHackMe · Kali Linux · Burp Suite
+                </div>
+
+            </div>
+
+
+            <div class="project">
+
+                <h3>MyFirstHack</h3>
+
+                <p>
+                    MyFirstHack cybersecurity learning journey and mini
+                    portfolios will be added here as individual security
+                    projects and assessments.
+                </p>
+
+                <div class="tools">
+                    Coming Soon
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Contact -->
+    <section id="contact">
+
+        <div class="section-title">
+            <h2>Contact</h2>
+            <p>Let's connect</p>
+        </div>
+
+        <div class="contact">
+
+            <p>
+                Interested in cybersecurity, security testing, SOC and
+                collaborative learning.
+            </p>
+
+            <a href="#" class="btn">GitHub</a>
+            <a href="#" class="btn">LinkedIn</a>
+
+        </div>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <p>
+            © 2026 Arundhathi S Pradeep · Cybersecurity Portfolio
+        </p>
+
+    </footer>
 
 </body>
 </html>
