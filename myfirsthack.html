@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>MyFirstHack | Arundhathi S Pradeep</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #0a0f14;
+            color: #e6edf3;
+            line-height: 1.6;
+        }
+
+        /* Navigation */
+
+        nav {
+            padding: 20px 8%;
+            border-bottom: 1px solid #1f2933;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #0a0f14;
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: bold;
+            color: #58a6ff;
+        }
+
+        nav a {
+            color: #c9d1d9;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            color: #58a6ff;
+        }
+
+        /* Hero */
+
+        .hero {
+            min-height: 65vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 80px 8%;
+            background:
+                radial-gradient(circle at top, #13202d 0%, #0a0f14 60%);
+        }
+
+        .hero h1 {
+            font-size: 55px;
+            color: #58a6ff;
+            margin-bottom: 15px;
+        }
+
+        .hero h2 {
+            color: #c9d1d9;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            max-width: 750px;
+            margin: auto;
+            color: #a8b3be;
+            font-size: 17px;
+        }
+
+        /* Main Content */
+
+        section {
+            padding: 80px 8%;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            color: #58a6ff;
+            font-size: 35px;
+            margin-bottom: 10px;
+        }
+
+        .section-title p {
+            color: #8b949e;
+        }
+
+        /* Portfolio Cards */
+
+        .portfolios {
+            display: grid;
+            grid-template-columns:
+                repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .portfolio-card {
+            background: #111820;
+            border: 1px solid #26313c;
+            padding: 25px;
+            border-radius: 10px;
+            transition: 0.3s;
+        }
+
+        .portfolio-card:hover {
+            transform: translateY(-5px);
+            border-color: #58a6ff;
+        }
+
+        .portfolio-card h3 {
+            color: #58a6ff;
+            margin-bottom: 12px;
+        }
+
+        .portfolio-card p {
+            color: #a8b3be;
+            margin-bottom: 20px;
+        }
+
+        .tag {
+            color: #8b949e;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+        /* Buttons */
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            border: 1px solid #58a6ff;
+            border-radius: 6px;
+            color: #58a6ff;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #58a6ff;
+            color: #0a0f14;
+        }
+
+        /* Footer */
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            border-top: 1px solid #1f2933;
+            color: #6e7681;
+        }
+
+        @media (max-width: 700px) {
+
+            .hero h1 {
+                font-size: 40px;
+            }
+
+            section {
+                padding: 60px 5%;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+    <!-- Navigation -->
+
+    <nav>
+
+        <div class="logo">
+            MyFirstHack
+        </div>
+
+        <a href="index.html">
+            ← Back to Main Portfolio
+        </a>
+
+    </nav>
+
+
+    <!-- Hero -->
+
+    <section class="hero">
+
+        <div>
+
+            <h1>MyFirstHack</h1>
+
+            <h2>90-Day Cybersecurity Learning Journey</h2>
+
+            <p>
+                A structured cybersecurity learning journey focused on
+                strengthening practical knowledge through hands-on exercises,
+                security research, assessments, labs, and real-world
+                cybersecurity concepts.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- Mini Portfolios -->
+
+    <section>
+
+        <div class="section-title">
+
+            <h2>Mini Portfolios</h2>
+
+            <p>
+                Practical cybersecurity learning documented through
+                focused mini portfolios
+            </p>
+
+        </div>
+
+
+        <div class="portfolios">
+
+
+            <!-- Network Security -->
+
+            <div class="portfolio-card">
+
+                <h3>Network Security</h3>
+
+                <p>
+                    Networking fundamentals, reconnaissance,
+                    port analysis, network security concepts,
+                    and practical network assessments.
+                </p>
+
+                <div class="tag">
+                    Networking · Nmap · Security Assessment
+                </div>
+
+                <span class="btn">
+                    Coming Soon
+                </span>
+
+            </div>
+
+
+            <!-- Web Security -->
+
+            <div class="portfolio-card">
+
+                <h3>Web Security</h3>
+
+                <p>
+                    Web application security concepts,
+                    vulnerability identification, HTTP security,
+                    and practical web security exercises.
+                </p>
+
+                <div class="tag">
+                    Web Security · OWASP · Burp Suite
+                </div>
+
+                <span class="btn">
+                    Coming Soon
+                </span>
+
+            </div>
+
+
+            <!-- Security Monitoring -->
+
+            <div class="portfolio-card">
+
+                <h3>Security Monitoring</h3>
+
+                <p>
+                    Exploring logs, network traffic,
+                    security monitoring concepts, and
+                    basic threat detection techniques.
+                </p>
+
+                <div class="tag">
+                    SOC · Splunk · Wireshark
+                </div>
+
+                <span class="btn">
+                    Coming Soon
+                </span>
+
+            </div>
+
+
+            <!-- Cloud Security -->
+
+            <div class="portfolio-card">
+
+                <h3>Cloud Security</h3>
+
+                <p>
+                    Exploring cloud infrastructure,
+                    common cloud security risks,
+                    shared responsibility, and
+                    security fundamentals.
+                </p>
+
+                <div class="tag">
+                    Cloud · Security Fundamentals
+                </div>
+
+                <span class="btn">
+                    Coming Soon
+                </span>
+
+            </div>
+
+
+            <!-- Phishing -->
+
+            <div class="portfolio-card">
+
+                <h3>Phishing & Social Engineering</h3>
+
+                <p>
+                    Understanding phishing techniques,
+                    social engineering risks,
+                    suspicious indicators, and
+                    defensive awareness.
+                </p>
+
+                <div class="tag">
+                    Phishing · Social Engineering · Analysis
+                </div>
+
+                <span class="btn">
+                    Coming Soon
+                </span>
+
+            </div>
+
+
+            <!-- Capstone -->
+
+            <div class="portfolio-card">
+
+                <h3>Network Security Capstone</h3>
+
+                <p>
+                    A practical security assessment of a
+                    small-business network, identifying weaknesses
+                    and developing recommendations to strengthen
+                    its overall security posture.
+                </p>
+
+                <div class="tag">
+                    Network Security · Risk Assessment · Defense
+                </div>
+
+                <span class="btn">
+                    Coming Soon
+                </span>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <footer>
+
+        <p>
+            © 2026 Arundhathi S Pradeep · MyFirstHack
+        </p>
+
+    </footer>
+
+</body>
+
+</html>
